@@ -1,0 +1,196 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --corCampo: rgba(0, 0, 0, 0.6);
+    --CorInput: rgba(255, 254, 254, 0.8);
+    --curvaBorda: 2rem;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+body img {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#conteiner {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    background-color: var(--corCampo);
+    border-radius: var(--curvaBorda);
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 30px 90px;
+
+}
+
+#conteiner h1 {
+    color: #fff;
+    margin-top: 15%;
+    font-size: 3.5rem;
+}
+
+#conteiner form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    height: 50%;
+    width: 65%;
+}
+
+#conteiner form input {
+    margin-bottom: 5%;
+    height: 10%;
+    width: 70%;
+    background-color: var(--CorInput);
+    border: 2px solid var(--corBorda);
+    border-radius: var(--curvaBorda);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#conteiner form input::placeholder {
+    padding: 0.8rem;
+}
+
+#botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 90%;
+    height: 20%;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 35%;
+    height: 60%;
+    background-color: #000;
+    border-radius: var(--curvaBorda);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.botao:hover {
+    background-color: #168039;
+
+}
+
+.botao h3 {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 1366px) {
+    #conteiner {
+        width: 50%;
+        height: 60%;
+    }
+
+    #conteiner h1 {
+        font-size: 2.5rem;
+    }
+
+    #conteiner form {
+        width: 65%;
+    }
+
+    .botao h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #conteiner {
+        width: 50%;
+        height: 45%;
+    }
+
+    #conteiner form input {
+        height: 15%;
+    }
+
+    .botao {
+        height: 25%;
+    }
+
+    .botao h3 {
+        font-size: 1rem;
+    }
+
+    .botao {
+        height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #conteiner {
+        width: 70%;
+        height: 50%;
+    }
+
+    #conteiner form {
+        width: 70%;
+    }
+
+    .botao {
+        width: 35%;
+    }
+}
+
+@media (max-width: 450px) {
+    #conteiner {
+        width: 90%;
+    }
+
+    .botao {
+        width: 45%;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    #conteiner {
+        width: 90%;
+        height: 40%;
+    }
+
+    #conteiner h1 {
+        font-size: 2rem;
+    }
+
+    #conteiner form {
+        height: 60%;
+        width: 100%;
+    }
+
+    #conteiner form input {
+        height: 15%;
+        width: 90%;
+    }
+
+}
