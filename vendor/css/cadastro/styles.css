@@ -35,7 +35,7 @@ body img {
     align-items: center;
     flex-direction: column;
     width: 40%;
-    height: 70%;
+    height: 80%;
     background-color: var(--corCampo);
     border-radius: var(--curvaBorda);
     border: 2px solid var(--corBorda);
@@ -73,26 +73,59 @@ body img {
     padding: 0.8rem;
 }
 
-#botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 35%;
-    height: 20%;
-    background-color: #000;
-    border-radius: var(--curvaBorda);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-}
-
-#botao:hover {
-    background-color: #168039;
-
-}
-
-#botao h3 {
+form button {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    background-color: #000;
+    margin-bottom: 3%;
+    width: 30%;
+    height: 15%;
+    border-radius: var(--curvaBorda);
+    border: 2px solid #fff;
+}
+
+form button:hover {
+    background-color: rgb(2, 136, 2);
+}
+
+form fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    width: 60%;
+    height: 20%;
+    border-radius: var(--curvaBorda);
+}
+
+form fieldset legend {
+    text-align: center;
+    color: #fff;
+}
+
+
+form fieldset p {
+    color: #fff;
+}
+
+.erro {
+    background-color: rgb(161, 0, 0);
+}
+
+.warning {
+    background-color: #E7B825;
+}
+
+.debug {
+    background-color: #0398F2;
+}
+
+.info{
+    background-color: #6394BA;
+}
+
+.sucesso {
+    background-color: #1B6938;
 }
 
 @media (max-width: 1366px) {
@@ -109,9 +142,10 @@ body img {
         width: 65%;
     }
 
-    #botao h3 {
-        font-size: 1.2rem;
+    form button {
+        height: 20%;
     }
+
 }
 
 @media (max-width: 1000px) {
@@ -124,13 +158,11 @@ body img {
         height: 15%;
     }
 
-    #botao {
+    form button {
         height: 25%;
     }
 
-    #botao h3 {
-        font-size: 1rem;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -143,9 +175,6 @@ body img {
         width: 70%;
     }
 
-    #botao {
-        width: 35%;
-    }
 }
 
 @media (max-width: 450px) {
@@ -153,10 +182,10 @@ body img {
         width: 90%;
     }
 
-    #botao {
-        width: 45%;
+    form button {
+        width: 40%;
+        height: 25%;
     }
-
 
 }
 
@@ -176,8 +205,8 @@ body img {
     }
 
     #conteiner form input {
-        height: 15%;
-        width: 90%;
+        height: 10%;
+        width: 80%;
     }
 
 }

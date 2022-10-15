@@ -15,15 +15,18 @@
     <div id="conteiner">
         <h1>Cadastro</h1>
         <form action="">
-            <input type="text" id="nome" placeholder="Nome:">
-            <input type="email" id="email" placeholder="Email:">
-            <input type="password" id="senha" placeholder="Senha:">
-            <input type="text" id="telefone" placeholder="telefone:">
-            <div id="botao" onclick="entrarLogin()">
-                <h3>Cadastrar</h3>
-            </div>
+            <input type="text" id="nome" name="nome" placeholder="Nome:" required>
+            <input type="email" id="email" name="email" placeholder="Email:" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha:" required>
+            <input type="text" id="telefone" name="telefone" placeholder="telefone:">
+            <button type="submit">Criar</button>
+            <fieldset class="sucesso">
+                <legend>Mensagem</legend>
+                <p>Erro</p>
+            </fieldset>
         </form>
     </div>
+
 
 </body>
 <script defer src="/vendor/js/cadastro/scripts.js"></script>
