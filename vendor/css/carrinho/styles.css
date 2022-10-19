@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 15px 2%;
+    align-items: center;
+    color: white;
+}
+
+body{
+    background-color: rgb(184, 190, 202);
+    
+
+}
+
+thead{
+    background-color: black;
+}
+
+thead tr{
+    color: white;
+}
+
+tbody td, table th{
+    padding: 5px;
+    text-align: center;
+    
+}
+
+tbody td input{
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+}
+
+#tabela_produtos{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    margin: 10% auto;
+    width: 70%;
+     
+}
+
+#tabela_total_pedido td{
+    font-weight: bold;
+    text-align: left;
+    padding: 0 20px;
+    width: 70%;
+
+}
+
+#tabela_total_pedido{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    margin: 10% auto;
+    margin-top: -30px;
+
+    
+    
+    
+}
+
+#sair > a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+#remover{
+    background-color: red;
+    padding: 5px;
+    color: white;
+    border-radius: 7%;
+}
+
