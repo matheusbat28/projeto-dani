@@ -8,20 +8,32 @@
     <title>Produtos</title>
     <link rel="stylesheet" href="/vendor/css/categoria/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script defer src="/vendor/js/categoria/scripts.js"></script>
 </head>
 
 <body>
+    <input type="checkbox" id="cbx">
     <header>
-        <div id="logoCart">
-            <img id="logoUser" src="https://source.unsplash.com/50x50/?face" alt="">
-            <i id="compras" class="fa-solid fa-cart-shopping"></i>
+        <div id="cbEsqueda">
+            <label for="cbx">
+                <img src="https://source.unsplash.com/50x50/?face" alt="" onclick="abrirMenu()">
+            </label>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div id="cbDireita">
+            <div id="pesquisar">
+                <input type="search" id="buscar" placeholder="Pesquisar">
+            </div>
+            <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="entrarLogin() "></i>
         </div>
 
-        <div id="searchExit">
-            <input type="search" id="pesquisa">
-            <i id="exit" class="fa-solid fa-right-from-bracket"></i>
-        </div>
     </header>
+    <aside id="menu">
+        <div><a id="linkMenu" href="#">Inicio</a></div>
+        <div><a id="linkMenu" href="/categoria/index.html">Categoria</a></div>
+        <div><a id="linkMenu" href="#">Produtos</a></div>
+        <div><a id="linkMenu" href="#">Perfil</a></div>
+    </aside>
     <section id="fundoProdutos">
         <img id="imgMadeira" src="/img/madeira.jpg" alt="">
         <section id="telaProdutos">
