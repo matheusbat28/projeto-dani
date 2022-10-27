@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/vendor/css/carrinho/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
@@ -28,76 +29,81 @@
     </header>
 
     <section>
-        <table id="tabela_produtos">
-            <thead id="cabecalho">
-                <tr>
-                    <th id="produto">Produto</th>
-                    <th id="descricao">Descrição</th>
-                    <th id="preco">Preço</th>
-                    <th id="quantidade">Quantidade</th>
-                    <th></th>
+        <div>
+            <div id="painelCarrinho">
+                <table id="tabela_produtos">
+                    <thead id="cabecalho">
+                        <tr>
+                            <th id="produto">Produto</th>
+                            <th id="descricao">Descrição</th>
+                            <th id="preco">Preço</th>
+                            <th id="quantidade">Quantidade</th>
+                            <th></th>
 
-                </tr>
-            </thead>
-            <tbody id="conteudo">
-                <tr>
-                    <td id="imgProduto">imgProduto</td>
-                    <td id="descricaoProduto">Descrição</td>
-                    <td id="precoProduto">R$ 10,00</td>
-                    <td> <input id="quantidade" type="number" name="Quantidade"></td>
-                    <td>
-                        <a id="remover" href="" class="fa-solid fa-trash"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imgProduto">imgProduto</td>
-                    <td id="descricaoProduto">Descrição</td>
-                    <td id="precoProduto">R$ 10,00</td>
-                    <td> <input id="quantidade" type="number" name="Quantidade"></td>
-                    <td>
-                        <a id="remover" href="" class="fa-solid fa-trash"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imgProduto">imgProduto</td>
-                    <td id="descricaoProduto">Descrição</td>
-                    <td id="precoProduto">R$ 10,00</td>
-                    <td> <input id="quantidade" type="number" name="Quantidade"></td>
-                    <td>
-                        <a id="remover" href="" class="fa-solid fa-trash"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imgProduto">imgProduto</td>
-                    <td id="descricaoProduto">Descrição</td>
-                    <td id="precoProduto">R$ 10,00</td>
-                    <td> <input id="quantidade" type="number" name="Quantidade"></td>
-                    <td>
-                        <a id="remover" href="" class="fa-solid fa-trash"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imgProduto">imgProduto</td>
-                    <td id="descricaoProduto">Descrição</td>
-                    <td id="precoProduto">R$ 10,00</td>
-                    <td> <input id="quantidade" type="number" name="Quantidade"></td>
-                    <td>
-                        <a id="remover" href="" class="fa-solid fa-trash"></a>
-                    </td>
-                </tr>
-            </tbody>
-            <table id="tabela_total_pedido">
-                <tbody>
-                    <tr>
-                        <td id="lbTotal">Total</td>
-                        <td id="valorTotalPedido">R$ 50,00</td>
-                    </tr>
-                </tbody>
-            </table>
-
+                        </tr>
+                    </thead>
+                    <tbody id="conteudo">
+                        <tr>
+                            <td id="imgProduto">imgProduto</td>
+                            <td id="descricaoProduto">Descrição</td>
+                            <td id="precoProduto">R$ 10,00</td>
+                            <td> <input id="quantidade" type="number" name="Quantidade"></td>
+                            <td>
+                                <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="imgProduto">imgProduto</td>
+                            <td id="descricaoProduto">Descrição</td>
+                            <td id="precoProduto">R$ 10,00</td>
+                            <td> <input id="quantidade" type="number" name="Quantidade"></td>
+                            <td>
+                                <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="imgProduto">imgProduto</td>
+                            <td id="descricaoProduto">Descrição</td>
+                            <td id="precoProduto">R$ 10,00</td>
+                            <td> <input id="quantidade" type="number" name="Quantidade"></td>
+                            <td>
+                                <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="imgProduto">imgProduto</td>
+                            <td id="descricaoProduto">Descrição</td>
+                            <td id="precoProduto">R$ 10,00</td>
+                            <td> <input id="quantidade" type="number" name="Quantidade"></td>
+                            <td>
+                                <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="imgProduto">imgProduto</td>
+                            <td id="descricaoProduto">Descrição</td>
+                            <td id="precoProduto">R$ 10,00</td>
+                            <td> <input id="quantidade" type="number" name="Quantidade"></td>
+                            <td>
+                                <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="tabela_total_pedido">
+                    <h3>Total</h1>
+                        <p>R$ 50,00</p>
+                </div>
 
 
-        </table>
+
+
+            </div>
+            <div id="botao">
+                <button id="fimCompra">Finalizar Compra</button>
+                <button id="cancela">Cancelar</button>
+            </div>
+        </div>
     </section>
 
 

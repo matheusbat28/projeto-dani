@@ -16,7 +16,7 @@ header{
 
 body{
     background-color: rgb(184, 190, 202);
-    
+
 
 }
 
@@ -58,13 +58,17 @@ tbody td input{
 
 #tabela_total_pedido{
     border: 2px solid rgb(0, 0, 0);
-    border-collapse: collapse;
-    margin: 10% auto;
-    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
-    
-    
-    
+#botao{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
 }
 
 #sair > a{
@@ -85,3 +89,11 @@ tbody td input{
     border-radius: 7%;
 }
 
+#painelCarrinho{
+    border: 1px solid black;
+    box-shadow: 1px 1px 15px 5px black ;
+}
+section{
+    padding: 20px 10% 0 10%;
+    
+}
