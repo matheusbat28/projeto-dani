@@ -117,7 +117,7 @@ header {
     background-color: var(--corCabecalho);
 }
 
-#linkMenu{
+#linkMenu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,13 +181,16 @@ section {
     height: 100%;
     position: fixed;
 }
+
 /*Teste de Flip*/
 .card-content {
-    width: 200px;
+    width: 240px;
     height: 200px;
     transform-style: preserve-3d;
     position: relative;
     transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 9px 5px rgba(3, 2, 2, 0.616);
+    border-radius: 15px 15px 0 0;
 }
 
 .card-front {
@@ -198,13 +201,13 @@ section {
 .card-back {
     width: 100%;
     height: 100%;
-    border-radius: 15px 0  0 15px;
+    border-radius: 15px 15px 0 0;
     position: absolute;
     backface-visibility: hidden;
 }
 
 .card-back {
-    background-color: dimgrey;
+    background-color: rgb(255, 255, 255);
     transform: rotateY(180deg)
 }
 
@@ -268,7 +271,9 @@ hr {
 #produto {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding: 1% 0px;
+    height: 50%;
 }
 
 #nmProduto {
@@ -294,8 +299,11 @@ hr {
     flex-direction: column;
     align-items: center;
     padding: 1% 1%;
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 0 15px 15px;
     gap: 17%;
+    height: 50%;
+    box-shadow: 0 0 9px 5px rgba(3, 2, 2, 0.616);
+    z-index: 9999;
 }
 
 #adicionar {
@@ -304,8 +312,6 @@ hr {
     align-items: center;
     flex-direction: column;
     padding: 1%;
-    gap: 20%;
-    height: 30%;
     width: 60%;
     font-size: 20px;
 }
@@ -323,12 +329,12 @@ hr {
 
 #numero {
     width: 36%;
-    /* padding: 0 15px; */
 }
 
-#image{
-    border-radius:  15px 0  0 15px
+#image {
+    border-radius: 15px 15px 0 0;
 }
+
 @media (max-width: 1466px) {
     #cbEsqueda {
         width: 20%;
@@ -343,25 +349,17 @@ hr {
     }
 }
 
-@media (max-width: 1366px) {
-    #cbEsqueda {
-        /* width: 15%; */
-    }
-}
+@media (max-width: 1366px) {}
 
 @media (max-width: 1000px) {
     #menu {
         width: 40%;
     }
-
-    #cbEsqueda {
-        /* width: 15%; */
-    }
 }
 
 
 @media(max-width: 1091px) {
-    #adicionar{
+    #adicionar {
         width: 100%;
     }
 
@@ -370,10 +368,10 @@ hr {
         padding: 1% 0;
     }
 
-    #imgMadeira{
+    #imgMadeira {
         width: 100%;
     }
-    
+
     #categoria {
         padding: 8% 0 3% 0;
     }
@@ -402,18 +400,15 @@ hr {
     section {
         display: block;
     }
-    #adicionar{
+
+    #adicionar {
         width: 100%;
     }
 
-    /* #image{
-        width: 30%;
-        height: 30vh;
-    } */
 
     #produto {
         height: 50%;
-        padding: 1% ;
+        padding: 1%;
     }
 
     #categoria {
@@ -448,7 +443,6 @@ hr {
     }
 
     #produto {
-        /* height: 50%; */
         padding: 1% 0;
     }
 
@@ -457,26 +451,21 @@ hr {
     }
 
     .card-content {
-        /* width: 200px;
-        height: 200px; */
         transform-style: preserve-3d;
         position: relative;
         transition: transform 0.5s ease-in-out;
     }
 
-    #imgMadeira{
+    #imgMadeira {
         width: 100%;
     }
 
-    #quantidade{
+    #quantidade {
         padding: 2px 5%;
     }
 }
-@media (max-width: 400px) {
-    #pesquisar {
-        /* margin-left: 3.5rem; */
 
-    }
+@media (max-width: 400px) {
 
     #buscar {
         width: 100%;
@@ -495,13 +484,13 @@ hr {
     }
 
     #produto {
-        /* height: 50%; */
         padding: 1% 0;
     }
 
     #barra {
         gap: 10%;
     }
+
     #menu {
         width: 70%;
     }
