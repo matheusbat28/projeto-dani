@@ -11,23 +11,25 @@
 
 <body>
     <img src="/img/fundo.jpg" alt="">
-
-    <div id="conteiner">
+    <form action="">
         <h1>Cadastro</h1>
-        <form action="/login/index.html">
-            <input type="text" id="nome" name="nome" placeholder="Nome:" required>
-            <input type="email" id="email" name="email" placeholder="Email:" required>
-            <input type="password" id="senha" name="senha" placeholder="Senha:" required>
-            <input type="text" id="telefone" name="telefone" placeholder="telefone:">
-            <button type="submit">Criar</button>
-            <fieldset class="sucesso">
+        <input type="text" placeholder="Nome:" required>
+        <input type="text" placeholder="Sobrenome:" required>
+        <input type="text" placeholder="Usuário:" required>
+        <input type="tel" placeholder="Telefone:">
+        <input type="email" placeholder="Email:" required>
+        <input type="password" placeholder="Senha:" required>
+        <div class="divForm">
+            <button type="submit" class="botao">Criar</button>
+            <a href="" class="botao">Login</a>
+        </div>
+        <div class="divForm">
+            <fieldset id="mensagem" class="error">
                 <legend>Mensagem</legend>
-                <p>Erro</p>
+                Erro
             </fieldset>
-        </form>
-    </div>
-
-
+        </div>
+    </form>
 </body>
 <script defer src="/vendor/js/cadastro/scripts.js"></script>
 

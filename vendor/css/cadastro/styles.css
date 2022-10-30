@@ -14,199 +14,114 @@
 }
 
 body {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
-body img {
-    width: 100vw;
-    height: 100vh;
-
-}
-
-#conteiner {
+img {
     position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+form {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    width: 40%;
-    height: 80%;
+    flex-flow: column wrap;
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    height: 95%;
     background-color: var(--corCampo);
     border-radius: var(--curvaBorda);
-    border: 2px solid var(--corBorda);
     box-shadow: rgba(0, 0, 0, 0.9) 0px 30px 90px;
-
 }
 
-#conteiner h1 {
-    color: #fff;
-    margin-top: 15%;
-    font-size: 3.5rem;
-}
-
-#conteiner form {
+form h1 {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    margin-top: 8%;
-    height: 50%;
-    width: 65%;
-}
-
-#conteiner form input {
-    margin-bottom: 5%;
-    height: 10%;
-    width: 70%;
-    background-color: var(--CorInput);
-    border: 2px solid var(--corBorda);
-    border-radius: var(--curvaBorda);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
-
-#conteiner form input::placeholder {
-    padding: 0.8rem;
-}
-
-form button {
-    color: #fff;
-    font-size: 1.2rem;
-    background-color: #000;
-    margin-bottom: 3%;
-    width: 30%;
-    height: 15%;
-    border-radius: var(--curvaBorda);
-    border: 2px solid #fff;
-}
-
-form button:hover {
-    background-color: rgb(2, 136, 2);
-}
-
-form fieldset {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    border: 2px solid #fff;
-    width: 60%;
+    width: 100%;
     height: 20%;
+    color: #fff;
+    font-size: 3.5rem;
+    margin: 3% 0;
+}
+
+form input {
+    width: 40%;
+    height: 5%;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 2px solid #000;
+    background-color: var(--CorInput);
+    margin-bottom: 1%;
+}
+
+.divForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 1%;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 3%;
+    width: 15%;
+    height: 50%;
+    font-size: 1.3rem;
+    border-radius: var(--curvaBorda);
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+}
+
+.botao:hover {
+    background-color: #168039;
+
+}
+
+#mensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 40%;
+    height: 80%;
     border-radius: var(--curvaBorda);
 }
 
-form fieldset legend {
+#mensagem legend {
     text-align: center;
     color: #fff;
 }
 
-
-form fieldset p {
-    color: #fff;
-}
-
-.erro {
-    background-color: rgb(161, 0, 0);
+.error {
+    background-color: rgb(216, 52, 52);
 }
 
 .warning {
-    background-color: #E7B825;
+    background-color: rgb(179, 179, 42);
 }
 
 .debug {
-    background-color: #0398F2;
+    background-color: rgb(48, 48, 241);
 }
 
-.info{
-    background-color: #6394BA;
+.success {
+    background-color: rgb(36, 143, 36);
 }
 
-.sucesso {
-    background-color: #1B6938;
-}
-
-@media (max-width: 1366px) {
-    #conteiner {
-        width: 50%;
-        height: 60%;
-    }
-
-    #conteiner h1 {
-        font-size: 2.5rem;
-    }
-
-    #conteiner form {
-        width: 65%;
-    }
-
-    form button {
-        height: 20%;
-    }
-
-}
-
-@media (max-width: 1000px) {
-    #conteiner {
-        width: 50%;
-        height: 45%;
-    }
-
-    #conteiner form input {
-        height: 15%;
-    }
-
-    form button {
-        height: 25%;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    #conteiner {
-        width: 70%;
-        height: 50%;
-    }
-
-    #conteiner form {
-        width: 70%;
-    }
-
-}
-
-@media (max-width: 450px) {
-    #conteiner {
-        width: 90%;
-    }
-
-    form button {
-        width: 40%;
-        height: 25%;
-    }
-
-}
-
-@media (max-width: 320px) {
-    #conteiner {
-        width: 90%;
-        height: 40%;
-    }
-
-    #conteiner h1 {
-        font-size: 2rem;
-    }
-
-    #conteiner form {
-        height: 60%;
-        width: 100%;
-    }
-
-    #conteiner form input {
-        height: 10%;
-        width: 80%;
-    }
-
+.info {
+    background-color: rgb(180, 22, 180);
 }
