@@ -349,8 +349,6 @@ hr {
     }
 }
 
-@media (max-width: 1366px) {}
-
 @media (max-width: 1000px) {
     #menu {
         width: 40%;
