@@ -49,8 +49,8 @@ header {
     cursor: pointer;
     margin-left: 1rem;
     border-radius: 100%;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     border: 2px solid var(--corBorda);
     max-width: 100%;
     -moz-transition: all 0.3s;
@@ -111,9 +111,10 @@ header {
     flex-direction: column;
     position: absolute;
     border-radius: 0 0 1rem 1rem;
-    z-index: 2;
+    z-index: 9999;
     width: 20%;
     height: 90%;
+    margin-top: 5.4%;
     background-color: var(--corCabecalho);
 }
 
@@ -303,7 +304,7 @@ hr {
     gap: 17%;
     height: 50%;
     box-shadow: 0 0 9px 5px rgba(3, 2, 2, 0.616);
-    z-index: 9999;
+    z-index: 2;
 }
 
 #adicionar {
