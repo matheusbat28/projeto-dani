@@ -111,7 +111,7 @@ header {
     flex-direction: column;
     position: absolute;
     border-radius: 0 0 1rem 1rem;
-    z-index: 9999;
+    z-index: 999;
     width: 20%;
     height: 90%;
     margin-top: 5.4%;
