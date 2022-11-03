@@ -8,206 +8,206 @@
 {% block titulo %} Categoria | {{user.get_username.title}}{% endblock %}
 
 {% block conteudo %}
-    <section id="fundoProdutos">
-        <img id="imgMadeira" src="{% static 'img/madeira.jpg' %}" alt="">
-        <section id="telaProdutos">
-            <h1 id="categoria">Categoria</h1>
-            <hr>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
+<section id="fundoProdutos">
+    <img id="imgMadeira" src="{% static 'img/madeira.jpg' %}" alt="">
+    <section id="telaProdutos">
+        <h1 id="categoria">Categoria</h1>
+        <hr>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
                         </div>
-                    </div>
-                </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
-                        </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?carne" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?carne" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?chocolat" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?chocolat" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?tea" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?tea" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?bolo" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?bolo" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-            <div id="produto">
-                <div id="imgProduto">
-                    <div class="wrapper">
-                        <div class="card-content">
-                            <div class="card-front">
-                                <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
-                            </div>
-                            <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
-                        </div>
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
                     </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
-                <div id="barra">
-                    <p id="nmProduto">Nome do produto</p>
-                    <h4 id="preco">R$ 65,00</h4>
-                    <div id="adicionar">
-                        <div id="quantidade">
-                            <p id="qtd">
-                                Qtd:
-                                <a id="menos">-</a>
-                                <input id="numero" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <a id="mais">+</a>
-                            </p>
+            </div>
+        </div>
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <img id="image" src="https://source.unsplash.com/240x200/?coffee" alt="">
                         </div>
-                        <i id="cart" class="fa-solid fa-cart-plus"></i>
+                        <div class="card-back" id="card-desc">Aqui temos a sua descrição</div>
                     </div>
                 </div>
             </div>
-        </section>
-{% endblock %}
+            <div id="barra">
+                <p id="nmProduto">Nome do produto</p>
+                <h4 id="preco">R$ 65,00</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a id="menos">-</a>
+                            <input id="numero" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a id="mais">+</a>
+                        </p>
+                    </div>
+                    <i id="cart" class="fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

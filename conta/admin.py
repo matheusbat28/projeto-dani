@@ -10,7 +10,7 @@ class UsuarioAdmin(UserAdmin):
             'fields': ('username', 'password')
         }),
         ('infomações Pessoais', {
-            'fields': ('first_name', 'last_name', 'cpf', 'telefone', )
+            'fields': ('first_name', 'last_name', 'telefone','perfil_img' )
         }),
         ('Permissôes', {
             'fields': (
@@ -23,4 +23,4 @@ class UsuarioAdmin(UserAdmin):
         }),
     )
     
-admin.site.register(Usuario, UserAdmin)
+admin.site.register(Usuario, UsuarioAdmin)

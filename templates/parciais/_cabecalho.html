@@ -3,7 +3,11 @@
 <header>
     <div id="cbEsqueda">
         <label for="cbx">
-            <img src="https://source.unsplash.com/50x50/?face" alt="" onclick="abrirMenu()">
+            {% if user.perfil_img %}
+                <img src="{{user.perfil_img.url}}" alt="" onclick="abrirMenu()">
+            {% else %}
+                <img src="{% static 'img/icon_user.png' %}" alt="" onclick="abrirMenu()">
+            {% endif %}
         </label>
         <i class="fa-solid fa-cart-plus"></i>
     </div>
