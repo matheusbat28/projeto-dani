@@ -1,0 +1,10 @@
+{% load static %}
+
+{% if messages %}
+    {% for message in messages %}
+        <fieldset id="mensagem" class="{{ message.tags }}">
+            <legend>Mensagem</legend>
+            {{ message }}
+        </fieldset>
+        {% endfor %}
+{% endif %}

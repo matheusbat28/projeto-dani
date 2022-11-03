@@ -1,0 +1,23 @@
+{% load static %}
+
+<img src="{% static 'img/fundo.jpg' %}" alt="">
+<div id="conteiner">
+    <h1>Login</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input name="usuario" type="text" id="usuario" placeholder="Usuario:">
+        <input name="senha" type="password" id="senha" placeholder="Senha:">
+        <div id="botoes">
+            <button type="submit" class="botao">
+                <h3>Entrar</h3>
+            </button>
+
+            <a href="{% url 'cadastro' %}" class="botao" id="bntCadastrar" >
+                <h3>Cadastrar</h3>
+            </a>
+        </div>
+        <div class="divForm">
+            {% include 'parciais/_mensagem.html' %}
+        </div>
+    </form>
+</div>

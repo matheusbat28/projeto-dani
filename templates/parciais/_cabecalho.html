@@ -1,0 +1,18 @@
+{% load static %}
+<input type="checkbox" id="cbx">
+<header>
+    <div id="cbEsqueda">
+        <label for="cbx">
+            <img src="https://source.unsplash.com/50x50/?face" alt="" onclick="abrirMenu()">
+        </label>
+        <i class="fa-solid fa-cart-plus"></i>
+    </div>
+    <div id="cbDireita">
+        <div id="pesquisar">
+            <input type="search" id="buscar" placeholder="Pesquisar">
+        </div>
+        <a href="{% url 'logout' %}">
+            <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+        </a>
+    </div>
+</header>

@@ -1,0 +1,19 @@
+{% load static %}
+<img src="{% static 'img/fundo.jpg' %}" alt="">
+<form action="" method="POST">
+    {% csrf_token %}
+    <h1>Cadastro</h1>
+    <input type="text" name="nome" placeholder="Nome:" required>
+    <input type="text" name="sobrenome" placeholder="Sobrenome:" required>
+    <input type="text" name="usuario" placeholder="Usuário:" required>
+    <input type="tel" name="telefone" placeholder="Telefone:" maxlength="15" onkeyup="handlePhone(event)">
+    <input type="email" name="email" placeholder="Email:">
+    <input type="password" name="senha" placeholder="Senha:" required>
+    <div class="divForm">
+        <button type="submit" class="botao">Criar</button>
+        <a href="{% url 'login' %}" class="botao">Login</a>
+    </div>
+    <div class="divForm">
+        {% include 'parciais/_mensagem.html' %}
+    </div>
+</form>

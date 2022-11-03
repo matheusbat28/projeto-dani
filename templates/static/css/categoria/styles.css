@@ -1,0 +1,348 @@
+
+section {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+
+#fundoProdutos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#telaProdutos {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    flex-wrap: wrap;
+    padding: 70px 2%;
+}
+
+#imgMadeira {
+    top: 8%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+/*Teste de Flip*/
+.card-content {
+    width: 240px;
+    height: 200px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 9px 5px rgba(3, 2, 2, 0.616);
+    border-radius: 15px 15px 0 0;
+}
+
+.card-front {
+    z-index: 999;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    background-color: rgb(255, 255, 255);
+    transform: rotateY(180deg)
+}
+
+.card-content:hover {
+    transform: rotateY(180deg);
+}
+
+#card-desc {
+    padding: 10px 5%;
+}
+
+/*Fim Teste de Flip*/
+
+
+#categoria {
+    text-align: center;
+    padding: 4% 0 2% 0;
+    font-size: 200%;
+    color: white;
+    font-weight: bold;
+}
+
+#logoUser:hover,
+#compras:hover,
+#cart:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#menos:hover,
+#mais:hover {
+    transition: 0.5s;
+    font-weight: bold;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+#menos,
+#mais {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+#qtd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+
+hr {
+    width: 100%;
+}
+
+#produto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1% 0px;
+    height: 50%;
+}
+
+#nmProduto {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#preco {
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#valor {
+    padding: 10px;
+}
+
+#barra {
+    background-color: #2c4c5c9f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 1%;
+    border-radius: 0 0 15px 15px;
+    gap: 17%;
+    height: 50%;
+    box-shadow: 0 0 9px 5px rgba(3, 2, 2, 0.616);
+    z-index: 2;
+}
+
+#adicionar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    width: 60%;
+    font-size: 20px;
+}
+
+#cart {
+    font-size: 150%;
+}
+
+#quantidade {
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.568);
+    gap: 6%;
+    padding: 2px 15%;
+}
+
+#numero {
+    width: 36%;
+}
+
+#image {
+    border-radius: 15px 15px 0 0;
+}
+
+@media (max-width: 1466px) {
+    #cbEsqueda {
+        width: 20%;
+    }
+
+    #menu div {
+        width: 70%;
+    }
+
+    #categoria {
+        padding: 6% 0 3% 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    #menu {
+        width: 40%;
+    }
+}
+
+
+@media(max-width: 1091px) {
+    #adicionar {
+        width: 100%;
+    }
+
+    #produto {
+        height: 50%;
+        padding: 1% 0;
+    }
+
+    #imgMadeira {
+        width: 100%;
+    }
+
+    #categoria {
+        padding: 8% 0 3% 0;
+    }
+
+}
+
+@media(max-width: 1091px) {
+    #categoria {
+        padding: 10% 0 3% 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #cbEsqueda {
+        width: 25%;
+    }
+
+    #menu div {
+        width: 70%;
+    }
+}
+
+@media(max-width: 769px) {
+
+    section {
+        display: block;
+    }
+
+    #adicionar {
+        width: 100%;
+    }
+
+
+    #produto {
+        height: 50%;
+        padding: 1%;
+    }
+
+    #categoria {
+        padding: 13% 0 5% 0;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    #cbEsqueda {
+        width: 30%;
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    #cbEsqueda {
+        width: 45%;
+    }
+
+    #cbDireita {
+        width: 50%;
+
+    }
+
+    #image {
+        width: 100%;
+        height: 100%;
+    }
+
+    #produto {
+        padding: 1% 0;
+    }
+
+    #barra {
+        gap: 10%;
+    }
+
+    .card-content {
+        transform-style: preserve-3d;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #imgMadeira {
+        width: 100%;
+    }
+
+    #quantidade {
+        padding: 2px 5%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #buscar {
+        width: 100%;
+    }
+
+    #menu div {
+        width: 80%;
+    }
+}
+
+@media(max-width: 332px) {
+
+    #image {
+        width: 100%;
+        height: 100%;
+    }
+
+    #produto {
+        padding: 1% 0;
+    }
+
+    #barra {
+        gap: 10%;
+    }
+
+    #menu {
+        width: 70%;
+    }
+}
