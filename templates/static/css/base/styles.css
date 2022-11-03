@@ -114,8 +114,6 @@ header {
     background-color: var(--corCabecalho);
 }
 
-
-
 #menu div {
     display: flex;
     align-items: center;
