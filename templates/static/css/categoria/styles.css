@@ -20,7 +20,7 @@ section {
 
 #telaProdutos {
     position: absolute;
-    top: 5%;
+
     display: flex;
     justify-content: center;
     gap: 1%;
