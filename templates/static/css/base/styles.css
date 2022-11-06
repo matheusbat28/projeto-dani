@@ -29,7 +29,6 @@ header {
     position: fixed;
     z-index: 9999;
     width: 100vw;
-    height: 12vh;
     background-color: var(--corCabecalho);
 }
 
@@ -188,11 +187,6 @@ header {
         margin-left: 6rem;
         height: 25%;
         width: 40%;
-    }
-
-    #cbEsqueda img {
-        width: 4.5rem;
-        height: 5rem;
     }
 
     #cbEsqueda i {

@@ -20,12 +20,12 @@ section {
 
 #telaProdutos {
     position: absolute;
-    top: 0px;
+    top: 5%;
     display: flex;
     justify-content: center;
     gap: 1%;
     flex-wrap: wrap;
-    padding: 70px 2%;
+    padding: 40px 2%;
 }
 
 #imgMadeira {
@@ -70,6 +70,23 @@ section {
 
 #card-desc {
     padding: 10px 5%;
+    overflow-y: auto;
+}
+
+
+#card-desc ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: #383636;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
 }
 
 /*Fim Teste de Flip*/
@@ -122,11 +139,12 @@ hr {
 }
 
 #produto {
+    width: 240px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 1% 0px;
-    height: 50%;
+    height: 100%;
 }
 
 #nmProduto {
@@ -147,6 +165,7 @@ hr {
 }
 
 #barra {
+    width: 240px;
     background-color: #2c4c5c9f;
     display: flex;
     flex-direction: column;
@@ -186,6 +205,8 @@ hr {
 
 #image {
     border-radius: 15px 15px 0 0;
+    height: 100%;
+    width: 100%;
 }
 
 @media (max-width: 1466px) {

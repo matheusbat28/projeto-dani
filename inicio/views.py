@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from .models import Produto
 
 @login_required(login_url= 'login')
 def home(request):
@@ -16,7 +17,10 @@ def logout(request):
 
 @login_required(login_url= 'login')
 def categoria(request):
+    context = {
+        'produtos': Produto.objects.all()
+    }
     if request.method == "POST":
         pass
     else:
-        return render(request, 'categoria/index.html')
+        return render(request, 'categoria/index.html', context=context)

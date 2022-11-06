@@ -5,7 +5,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=255)
     quantidade = models.IntegerField()
     descricao = models.TextField()
-    peso = models.FloatField()
+    peso = models.FloatField(blank=False, null=False)
     preco = models.FloatField()
     data_fabricacao = models.DateTimeField()
     data_validacao = models.DateTimeField()
