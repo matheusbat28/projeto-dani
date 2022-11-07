@@ -3,6 +3,7 @@
 
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/categoria/styles.css' %}">
+<script defer src="{% static 'js/categoria/scripts.js' %}"></script>
 {% endblock %}
 
 {% block titulo %} Categoria | {{user.get_username.title}}{% endblock %}
@@ -11,9 +12,13 @@
 <section id="fundoProdutos">
     <img id="imgMadeira" src="{% static 'img/madeira.jpg' %}" alt="">
     <section id="telaProdutos">
-        <h1 id="categoria">Categoria</h1>
+        {% for categoria in categorias %}
+
+        <h1 id="categoria">{{categoria.tpCategoria}}</h1>
         <hr>
+    
         {% for produto in produtos %}
+        {% if produto.quantidade > 0 and produto.categoria == categoria %}
         <div id="produto">
             <div id="imgProduto">
                 <div class="wrapper">
@@ -36,16 +41,19 @@
                     <div id="quantidade">
                         <p id="qtd">
                             Qtd:
-                            <a id="menos">-</a>
-                            <input id="numero" type="text"
+                            <a onclick="menos()" id="menos">-</a>
+                            <input id="numero" value="1" type="text"
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <a id="mais">+</a>
+                            <a onclick="mais()" id="mais">+</a>
                         </p>
                     </div>
                     <i id="cart" class="fa-solid fa-cart-plus"></i>
                 </div>
             </div>
         </div>
+        {% endif %}
+        {% endfor %}
+        <div class="break"></div>
         {% endfor %}
     </section>
     {% endblock %}

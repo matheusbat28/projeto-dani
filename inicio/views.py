@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
-from .models import Produto
+from .models import Produto, Categoria
 
 @login_required(login_url= 'login')
 def home(request):
@@ -18,7 +18,8 @@ def logout(request):
 @login_required(login_url= 'login')
 def categoria(request):
     context = {
-        'produtos': Produto.objects.all()
+        'produtos': Produto.objects.all(),
+        'categorias': Categoria.objects.all()
     }
     if request.method == "POST":
         pass
