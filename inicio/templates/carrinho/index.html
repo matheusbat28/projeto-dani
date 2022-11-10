@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/carrinho/styles.css' %}">
+{% endblock %}
+
+{% block titulo %} Carrinho | {{user.get_username.title}}{% endblock %}
+
+{% block conteudo %}
+<section>
+    <div id="principal">
+        <div id="painelCarrinho">
+            <table id="tabela_produtos">
+                <thead id="cabecalho">
+                    <tr>
+                        <th id="produto">Produto</th>
+                        <th id="descricao">Descrição</th>
+                        <th id="preco">Preço</th>
+                        <th id="quantidade">Quantidade</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="conteudo">
+                    <tr>
+                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="descricaoProduto">Descrição</td>
+                        <td id="precoProduto">R$ 10,00</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td>
+                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="descricaoProduto">Descrição</td>
+                        <td id="precoProduto">R$ 10,00</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td>
+                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="descricaoProduto">Descrição</td>
+                        <td id="precoProduto">R$ 10,00</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td>
+                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="descricaoProduto">Descrição</td>
+                        <td id="precoProduto">R$ 10,00</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td>
+                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="descricaoProduto">Descrição</td>
+                        <td id="precoProduto">R$ 10,00</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td>
+                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="tabela_total_pedido">
+                <h3>Total</h3>
+                <p>R$ 50,00</p>
+            </div>
+
+
+
+
+        </div>
+        <div id="botao">
+            <button id="fimCompra">Finalizar Compra</button>
+            <button id="cancela">Cancelar</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

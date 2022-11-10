@@ -9,7 +9,9 @@
                 <img src="{% static 'img/icon_user.png' %}" alt="" onclick="abrirMenu()">
             {% endif %}
         </label>
-        <i class="fa-solid fa-cart-plus"></i>
+        <a href="{% url 'carrinho' %}">
+            <i class="fa-solid fa-cart-plus"></i>
+        </a>
     </div>
     <div id="cbDireita">
         <div id="pesquisar">

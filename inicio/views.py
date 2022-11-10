@@ -25,3 +25,11 @@ def categoria(request):
         pass
     else:
         return render(request, 'categoria/index.html', context=context)
+
+
+@login_required(login_url= 'login')
+def carrinho(request):
+    if request.method == "POST":
+        pass
+    else:
+        return render(request, 'carrinho/index.html')
