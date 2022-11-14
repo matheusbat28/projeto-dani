@@ -23,56 +23,22 @@
                     </tr>
                 </thead>
                 <tbody id="conteudo">
+                    {% for carrinho in carrinhos %}
                     <tr>
                         <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">Descrição</td>
-                        <td id="precoProduto">R$ 10,00</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
+                        <td id="descricaoProduto">{{carrinho.produto.nome}}</td>
+                        <td id="precoProduto">R$ {{carrinho.produto.preco}}</td>
+                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50" value="{{carrinho.quantidade_produto}}"></td>
                         <td>
                             <a id="remover" href="" class="fa-solid fa-trash"></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">Descrição</td>
-                        <td id="precoProduto">R$ 10,00</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
-                        <td>
-                            <a id="remover" href="" class="fa-solid fa-trash"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">Descrição</td>
-                        <td id="precoProduto">R$ 10,00</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
-                        <td>
-                            <a id="remover" href="" class="fa-solid fa-trash"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">Descrição</td>
-                        <td id="precoProduto">R$ 10,00</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
-                        <td>
-                            <a id="remover" href="" class="fa-solid fa-trash"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">Descrição</td>
-                        <td id="precoProduto">R$ 10,00</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50"></td>
-                        <td>
-                            <a id="remover" href="" class="fa-solid fa-trash"></a>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             <div id="tabela_total_pedido">
                 <h3>Total</h3>
-                <p>R$ 50,00</p>
+                <p>R$ {{valor}}</p>
             </div>
 
 

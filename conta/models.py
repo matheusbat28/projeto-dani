@@ -6,4 +6,4 @@ class Usuario(AbstractUser):
     perfil_img = models.ImageField(upload_to='perfil_img/%Y/%m/%d', blank=True, null=True)
     
     def __str__(self):
-        return self.username
+        return self.get_username()

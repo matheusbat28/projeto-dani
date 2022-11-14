@@ -4,6 +4,7 @@ from conta.models import Usuario
 
 class Categoria(models.Model):
     tpCategoria = models.CharField(max_length=255)
+    categoria_img = models.ImageField(upload_to='categoria_img/%Y/%m/%d')
     
     def __str__(self):
         return self.tpCategoria
@@ -35,7 +36,8 @@ class Produto(models.Model):
 class Carrinho(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
     produto = models.ForeignKey(Produto, on_delete=models.DO_NOTHING)
+    quantidade_produto = models.IntegerField()
     
     def __str__(self):
-        return self.usuario
+        return self.usuario.get_username()
 

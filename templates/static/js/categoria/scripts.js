@@ -1,11 +1,15 @@
 let numero = document.getElementById('numero');
 
+let numeroInt = parseInt(numero.value)
 
 function menos() {
     event.preventDefault();
-    numero.value = numero.value-1
+    if (numero.value >= 1){
+        numero.value -= 1
+    }
 }
 function mais() {
     event.preventDefault();
-    numero.value = numero.value+1
+    numeroInt += 1
+    numero.value = numeroInt
 }

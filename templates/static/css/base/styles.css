@@ -94,7 +94,8 @@ header {
     align-items: center;
     width: 70%;
     height: 30%;
-}
+}   
+
 
 #buscar {
     border: 4px solid var(--corIcon);
@@ -141,6 +142,11 @@ header {
 }
 
 #menu div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     color: #fff;
     font-size: 1.5rem;
 }

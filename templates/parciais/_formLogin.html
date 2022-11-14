@@ -3,7 +3,7 @@
 <img src="{% static 'img/fundo.jpg' %}" alt="">
 <div id="conteiner">
     <h1>Login</h1>
-    <form action="" method="POST">
+    <form action="" method="POST"> 
         {% csrf_token %}
         <input name="usuario" type="text" id="usuario" placeholder="Usuario:">
         <input name="senha" type="password" id="senha" placeholder="Senha:">

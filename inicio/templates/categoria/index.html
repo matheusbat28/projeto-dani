@@ -34,22 +34,23 @@
                     </div>
                 </div>
             </div>
-            <div id="barra">
-                <p id="nmProduto">{{produto.nome}}</p>
+            <form id="barra" method="POST" action="{% url 'categoria' %}"> {% csrf_token %}
+                <p id="nmProduto" name="nmProduto">{{produto.nome}}</p>
                 <h4 id="preco">R$ {{produto.preco}}</h4>
                 <div id="adicionar">
                     <div id="quantidade">
                         <p id="qtd">
                             Qtd:
                             <a onclick="menos()" id="menos">-</a>
-                            <input id="numero" value="1" type="text"
+                            <input name="qtdProduto" id="numero" value="1" type="text"
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                             <a onclick="mais()" id="mais">+</a>
                         </p>
                     </div>
-                    <i id="cart" class="fa-solid fa-cart-plus"></i>
+                    <button type="submit" name="btCart" value="{{produto.id}}" id="cart" class="fa-solid fa-cart-plus">
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
         {% endif %}
         {% endfor %}
