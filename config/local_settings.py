@@ -1,6 +1,6 @@
 DEBUG = True
 
-ALLOWED_HOSTS = ['mercadodani.herokuapp.com']
+ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
