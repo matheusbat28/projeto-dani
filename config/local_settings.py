@@ -1,6 +1,6 @@
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://www.youtube.com/watch?v=V_YlZ1JdcVk']
 
 DATABASES = {
     'default': {
