@@ -27,6 +27,9 @@ SECRET_KEY = 'django-insecure-m8bm^ch0-tv8q=ws%yj96j8@bkliptd-rei+vt#ns^v-i)czav
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+ALLOWED_HOSTS = ['mercadodani.herokuapp.com']
+
+
 # Application definition
 
 INSTALLED_APPS = [
