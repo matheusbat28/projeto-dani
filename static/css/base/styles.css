@@ -13,6 +13,7 @@
     --corBorda: #fff;
 }
 
+
 #cbx {
     display: none;
 }
@@ -94,7 +95,7 @@ header {
     align-items: center;
     width: 70%;
     height: 30%;
-}   
+}
 
 
 #buscar {

@@ -37,6 +37,8 @@ class Carrinho(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
     produto = models.ForeignKey(Produto, on_delete=models.DO_NOTHING)
     quantidade_produto = models.IntegerField()
+    valorTotal = models.FloatField(blank=True, null=True)
+    status = models.BooleanField(default=False)
     
     def __str__(self):
         return self.usuario.get_username()

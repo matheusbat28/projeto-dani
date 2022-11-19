@@ -26,11 +26,11 @@
                     {% for carrinho in carrinhos %}
                     <tr>
                         <td id="imgProduto"><a href="">imgProduto</a></td>
-                        <td id="descricaoProduto">{{carrinho.produto.nome}}</td>
+                        <td id="descricaoProduto" name="{{carrinho.id}}" value="{{carrinho.id}}">{{carrinho.produto.nome}}</td>
                         <td id="precoProduto">R$ {{carrinho.produto.preco}}</td>
-                        <td> <input id="quantidade" type="number" name="Quantidade" min="1" max="50" value="{{carrinho.quantidade_produto}}"></td>
+                        <td> <input id="quantidade" type="number" min="1" max="50" value="{{carrinho.quantidade_produto}}" disabled="disabled"></td>
                         <td>
-                            <a id="remover" href="" class="fa-solid fa-trash"></a>
+                            <a id="remover" href="{% url 'deletarCart' carrinho.id %}" class="fa-solid fa-trash"></a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -38,17 +38,17 @@
             </table>
             <div id="tabela_total_pedido">
                 <h3>Total</h3>
-                <p>R$ {{valor}}</p>
+                <p name="valorTot">R$ {{valor}}</p>
             </div>
 
 
 
 
         </div>
-        <div id="botao">
+        <form id="botao" action="{% url 'carrinho' %}" method="POST"> {% csrf_token %}
             <button id="fimCompra">Finalizar Compra</button>
             <button id="cancela">Cancelar</button>
-        </div>
+        </form>
     </div>
 </section>
 {% endblock %}

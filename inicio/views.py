@@ -33,12 +33,27 @@ def categoria(request):
 
 @login_required(login_url= 'login')
 def carrinho(request):
-    carrinhos = Carrinho.objects.filter(usuario_id=request.user.id)
+    carrinhos = Carrinho.objects.filter(status = False, usuario = request.user.id)
     valor = 0
     for carrinho in carrinhos:
         valor += carrinho.produto.preco * carrinho.quantidade_produto
 
     if request.method == "POST":
-        pass
+        
+        for carrinho in carrinhos:  
+            valores = '{:.2f}'.format(carrinho.produto.preco * carrinho.quantidade_produto)
+            carrinho.status = True
+            carrinho.valorTotal = valores
+            carrinho.save()
+        
+        return redirect('carrinho')
     else:
         return render(request, 'carrinho/index.html', {'carrinhos':carrinhos, 'valor':valor})
+
+@login_required(login_url= 'login')
+def deletarCart(request, id):
+    if Carrinho.objects.get(id=id):
+        Carrinho.objects.get(id=id).delete()
+        return redirect('carrinho')
+    else:
+        return redirect('carrinho')

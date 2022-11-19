@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block link %}{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/inicio/styles.css' %}">
+{% endblock %}
 
-{% block titulo %} home | {{user.get_username.title}}{% endblock %}
+{% block titulo %} Inicio | {{user.get_username.title}}{% endblock %}
 
 {% block conteudo %}
-
-{% endblock %}
+    <img id="fundo" src="{% static 'img/madeira.jpg' %}" alt="">   
+{%endblock%}
