@@ -29,7 +29,7 @@ def categoria(request):
 
     context = {
         'produtos': Produto.objects.all(),
-        'categorias': Categoria.objects.raw('select ic.id, ic.tpCategoria from inicio_produto ip left join inicio_categoria ic on ic.id = ip.categoria_id group by ic.id, ic.tpCategoria')
+        'categorias': Categoria.objects.raw('select "ic"."id", "ic"."tpCategoria" from inicio_produto as ip left join inicio_categoria ic on "ic"."id" = "ip"."categoria_id" group by "ic"."id", "ic"."tpCategoria"')
     }
     if request.method == "POST":
         produt = Produto.objects.get(id = request.POST.get('btCart'))

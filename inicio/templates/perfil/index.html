@@ -27,7 +27,11 @@
         <input type="file" name="image" id="inputEditImg">
         <div id="adicionarImagem">
             <label for="inputEditImg" id="lbAddImg">Trocar Foto</label>
-            <img src="{{usuario.perfil_img.url}}" alt="" id="imagem">
+            {% if user.perfil_img %}
+                <img src="{{usuario.perfil_img.url}}" alt="" id="imagem">
+            {% else %}
+                <img src="{% static 'img/icon_user.png' %}" alt="" id="imagem">
+            {% endif %}
         </div>
 
     </div>
