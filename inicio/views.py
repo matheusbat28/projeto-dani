@@ -95,7 +95,7 @@ def perfil(request):
         email = request.POST.get('email').strip()
         senha1 = request.POST.get('senha1').strip()
         senha2 = request.POST.get('senha2').strip()
-        img = request.FILES.get('image').strip()
+        img = request.FILES.get('image')
         if first_name != usuario.first_name:
             usuario.first_name = first_name
             msg +="Usuario,"
