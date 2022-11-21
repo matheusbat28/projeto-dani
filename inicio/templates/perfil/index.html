@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/perfil/styles.css' %}">
+{% endblock %}
+
+{% block titulo %} Perfil | {{user.get_username.title}}{% endblock %}
+
+{% block conteudo %}
+<div class="hero">
+    <div class="diagonal-hero-bg">
+        <h1 id="nmPerfil">Perfil</h1>
+        <div class="stars">
+            <div class="small"></div>
+            <div class="medium"></div>
+            <div class="big"></div>
+        </div>
+    </div>
+</div>
+<form id="inputs" action="" method="POST" enctype="multipart/form-data"> 
+    {% csrf_token %}
+    <div id="editFoto">
+        <h4>Foto de Perfil</h4>
+
+
+        <input type="file" name="image" id="inputEditImg">
+        <div id="adicionarImagem">
+            <label for="inputEditImg" id="lbAddImg">Trocar Foto</label>
+            <img src="{{usuario.perfil_img.url}}" alt="" id="imagem">
+        </div>
+
+    </div>
+    <div id="editNome">
+        <h4>Primeiro Nome</h4>
+        <input type="text" name="first_name" value="{{usuario.first_name}}" id="inputName">
+    </div>
+    <div id="editNome">
+        <h4>Sobrenome </h4>
+        <input type="text" name="last_name" value="{{usuario.last_name}}" id="inputName">  
+    </div>
+    <div id="editTel">
+        <h4>Telefone</h4>
+        <input type="tel" name="telefone" value="{{usuario.telefone}}" id="inputTel">
+    </div>
+    <div id="editEmail">
+        <h4>Email</h4>
+        <input type="email" name="email" value="{{usuario.email}}" id="inputEdit">
+    </div>
+    <div id="editSenha">
+        <h4>Senha</h4>
+        <div>
+            <input type="password" name="senha1" id="inputSenha" placeholder="Senha" >
+            <input type="password" name="senha2" id="inputSenha" placeholder="Confirme a Senha">
+        </div>
+    </div>
+
+    <div class="divForm">
+        {% include 'parciais/_mensagem.html' %}
+    </div>
+    
+    <a href="">
+        <button type="submit" class="bn54">
+            <span class="bn54span">SALVAR</span>
+        </button>
+    </a>
+</form>
+{% endblock %}

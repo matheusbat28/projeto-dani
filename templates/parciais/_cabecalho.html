@@ -13,12 +13,12 @@
             <i class="fa-solid fa-cart-plus"></i>
         </a>
     </div>
-    <div id="cbDireita">
+    <form id="cbDireita" action="{% url 'buscar' %}" method="GET">
         <div id="pesquisar">
-            <input type="search" id="buscar" placeholder="Pesquisar">
+            <input type="search" name="buscar"id="buscar" placeholder="Pesquisar">
         </div>
         <a href="{% url 'logout' %}">
             <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
         </a>
-    </div>
+    </form>
 </header>

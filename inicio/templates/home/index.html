@@ -3,10 +3,38 @@
 
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/inicio/styles.css' %}">
+<script defer src="{% static 'js/inicio/scripts.js' %}"></script>
 {% endblock %}
 
 {% block titulo %} Inicio | {{user.get_username.title}}{% endblock %}
 
 {% block conteudo %}
-    <img id="fundo" src="{% static 'img/madeira.jpg' %}" alt="">   
+<img id="fundo" src="{% static 'img/madeira.jpg' %}" alt="">
+
+<div class="container">
+    <button class="arrow-left control" aria-label="Previous image">◀</button>
+    <button class="arrow-right control" aria-label="Next Image">▶</button>
+    <div class="gallery-wrapper">
+        {% for produto in produtos %}
+            <div class="gallery">
+                <img src="{{produto.protudo_img.url}}" alt="Beach Image" class="item current-item">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="cards-list">
+
+    {% for categoria in categorias %}
+    <a href="{% url 'categoria' %}">
+        <div class="card 1">
+            <div class="card_image"> <img src="{{categoria.categoria_img.url}}" /> </div>
+            <div class="card_title title-white">
+                <p>{{categoria.tpCategoria}}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
 {%endblock%}

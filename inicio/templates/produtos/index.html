@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/categoria/styles.css' %}">
+<script defer src="{% static 'js/categoria/scripts.js' %}"></script>
+{% endblock %}
+
+{% block titulo %} Produtos | {{user.get_username.title}}{% endblock %}
+
+{% block conteudo %}
+<section id="fundoProdutos">
+    <img id="imgMadeira" src="{% static 'img/madeira.jpg' %}" alt="">
+    <section id="telaProdutos">
+
+        <h1 id="categoria">Produtos</h1>
+        <hr>
+    
+        {% for produto in produtos %}
+        {% if produto.quantidade > 0 %}
+        <div id="produto">
+            <div id="imgProduto">
+                <div class="wrapper">
+                    <div class="card-content">
+                        <div class="card-front">
+                            {% if produto.protudo_img %}
+                            <img id="image" src="{{produto.protudo_img.url}}" alt="">
+                            {% else %}
+                            <img id="image" src="" alt="">
+                            {% endif %}
+                        </div>
+                        <div class="card-back" id="card-desc">{{produto.descricao}}</div>
+                    </div>
+                </div>
+            </div>
+            <form id="barra" method="POST" action="{% url 'produtos' %}"> {% csrf_token %}
+                <p id="nmProduto" name="nmProduto">{{produto.nome}}</p>
+                <h4 id="preco">R$ {{produto.preco}}</h4>
+                <div id="adicionar">
+                    <div id="quantidade">
+                        <p id="qtd">
+                            Qtd:
+                            <a onclick="menos()" id="menos">-</a>
+                            <input name="qtdProduto" id="numero" value="1" type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <a onclick="mais()" id="mais">+</a>
+                        </p>
+                    </div>
+                    <button type="submit" name="btCart" value="{{produto.id}}" id="cart" class="fa-solid fa-cart-plus">
+                    </button>
+                </div>
+            </form>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <div class="break"></div>
+    </section>
+    {% endblock %}
