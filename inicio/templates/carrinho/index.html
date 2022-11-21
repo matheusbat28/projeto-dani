@@ -25,7 +25,7 @@
                 <tbody id="conteudo">
                     {% for carrinho in carrinhos %}
                     <tr>
-                        <td id="imgProduto"><a href="">imgProduto</a></td>
+                        <td id="imgProduto"><a href=""><img src="{{carrinho.produto.protudo_img.url}}" alt=""></a></td>
                         <td id="descricaoProduto" name="{{carrinho.id}}" value="{{carrinho.id}}">{{carrinho.produto.nome}}</td>
                         <td id="precoProduto">R$ {{carrinho.produto.preco}}</td>
                         <td> <input id="quantidade" type="number" min="1" max="50" value="{{carrinho.quantidade_produto}}" disabled="disabled"></td>

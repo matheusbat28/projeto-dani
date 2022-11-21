@@ -33,7 +33,7 @@ def categoria(request):
     }
     if request.method == "POST":
         produt = Produto.objects.get(id = request.POST.get('btCart'))
-        qtdProduto = request.POST.get('qtdProduto')
+        qtdProduto = request.POST.get('qtdProduto').strip()
         Carrinho.objects.create(produto_id = produt.id, usuario_id=request.user.id, quantidade_produto=qtdProduto)
         return redirect('categoria')
     else:
@@ -78,7 +78,7 @@ def produtos(request):
     }
     if request.method == "POST":
         produt = Produto.objects.get(id = request.POST.get('btCart'))
-        qtdProduto = request.POST.get('qtdProduto')
+        qtdProduto = request.POST.get('qtdProduto').strip()
         Carrinho.objects.create(produto_id = produt.id, usuario_id=request.user.id, quantidade_produto=qtdProduto)
         return redirect('produtos')
     else:
@@ -89,13 +89,13 @@ def perfil(request):
     usuario = Usuario.objects.get(id=request.user.id)
     if request.method == "POST":
         msg = ''
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
-        telefone = request.POST.get('telefone')
-        email = request.POST.get('email')
-        senha1 = request.POST.get('senha1')
-        senha2 = request.POST.get('senha2')
-        img = request.FILES.get('image')
+        first_name = request.POST.get('first_name').strip()
+        last_name = request.POST.get('last_name').strip()
+        telefone = request.POST.get('telefone').strip()
+        email = request.POST.get('email').strip()
+        senha1 = request.POST.get('senha1').strip()
+        senha2 = request.POST.get('senha2').strip()
+        img = request.FILES.get('image').strip()
         if first_name != usuario.first_name:
             usuario.first_name = first_name
             msg +="Usuario,"
@@ -128,7 +128,7 @@ def perfil(request):
 
 @login_required(login_url= 'login')
 def buscar(request):
-    busca = request.GET.get('buscar')
+    busca = request.GET.get('buscar').strip()
     context = {
         'produtos': Produto.objects.filter(Q(nome__icontains=busca) | Q(descricao__icontains=busca)),
     }

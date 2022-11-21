@@ -1,6 +1,6 @@
 body {
     background-color: rgb(184, 190, 202);
-    overflow: hidden;
+    overflow: auto;
 }
 
 #principal {
@@ -56,10 +56,19 @@ tbody td input {
     background-color: rgb(148, 148, 148);
 }
 
+#imgProduto {
+    width: 20%;
+}
+
 #imgProduto>a {
     font-weight: bold;
     text-decoration: none;
     color: black;
+}
+
+#imgProduto>a img {
+    width: 40%;
+    height: 100%;
 }
 
 #botao {
